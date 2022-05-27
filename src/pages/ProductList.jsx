@@ -39,13 +39,13 @@ const ProductList = () => {
         <Container>
         <Navbar />
         <Announcement />
-        <Title>Dresses</Title>
+        <Title>Lista de Productos</Title>
         <FilterContainer>
             <Filter>
-            <FilterText>Filter Products:</FilterText>
+            <FilterText>Filtro de Productos:</FilterText>
             <Select>
                 <Option disabled selected>
-                Color
+                Autor
                 </Option>
                 <Option>White</Option>
                 <Option>Black</Option>
@@ -56,7 +56,7 @@ const ProductList = () => {
             </Select>
             <Select>
                 <Option disabled selected>
-                Size
+                Año
                 </Option>
                 <Option>XS</Option>
                 <Option>S</Option>
@@ -66,11 +66,11 @@ const ProductList = () => {
             </Select>
             </Filter>
             <Filter>
-            <FilterText>Sort Products:</FilterText>
+            <FilterText>Filtrar Por:</FilterText>
             <Select>
-                <Option selected>Newest</Option>
-                <Option>Price (asc)</Option>
-                <Option>Price (desc)</Option>
+                <Option selected>Mas Relevante</Option>
+                <Option>Precio (asc)</Option>
+                <Option>Precio (desc)</Option>
             </Select>
             </Filter>
         </FilterContainer>
