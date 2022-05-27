@@ -21,7 +21,7 @@ const ImgContainer = styled.div`
 const Image = styled.img`
     width: 100%;
     height: 90vh;
-    bject-fit: cover;
+    object-fit: cover;
 `;
 
 const InfoContainer = styled.div`
@@ -42,39 +42,6 @@ const Price = styled.span`
     font-size: 40px;
 `;
 
-const FilterContainer = styled.div`
-    width: 50%;
-    margin: 30px 0px;
-    display: flex;
-    justify-content: space-between;
-    
-`;
-
-const Filter = styled.div`
-    display: flex;
-    align-items: center;
-`;
-
-const FilterTitle = styled.span`
-    font-size: 20px;
-    font-weight: 200;
-`;
-
-const FilterColor = styled.div`
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: ${(props) => props.color};
-    margin: 0px 5px;
-    cursor: pointer;
-`;
-
-const FilterSize = styled.select`
-    margin-left: 10px;
-    padding: 5px;
-`;
-
-const FilterSizeOption = styled.option``;
 
 const AddContainer = styled.div`
     width: 50%;
@@ -119,10 +86,10 @@ const Product = () => {
         <Announcement />
         <Wrapper>
             <ImgContainer>
-            <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
+            <Image src="https://panamericana.vteximg.com.br/arquivos/ids/405893-1600-1600/el-contrato-social-9788496975583.jpg" />
             </ImgContainer>
             <InfoContainer>
-            <Title>Denim Jumpsuit</Title>
+            <Title>El contrato Social</Title>
             <Desc>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                 venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at
@@ -131,24 +98,7 @@ const Product = () => {
                 condimentum ac, volutpat ornare.
             </Desc>
             <Price>$ 20</Price>
-            <FilterContainer>
-                <Filter>
-                <FilterTitle>Color</FilterTitle>
-                <FilterColor color="black" />
-                <FilterColor color="darkblue" />
-                <FilterColor color="gray" />
-                </Filter>
-                <Filter>
-                <FilterTitle>Size</FilterTitle>
-                <FilterSize>
-                    <FilterSizeOption>XS</FilterSizeOption>
-                    <FilterSizeOption>S</FilterSizeOption>
-                    <FilterSizeOption>M</FilterSizeOption>
-                    <FilterSizeOption>L</FilterSizeOption>
-                    <FilterSizeOption>XL</FilterSizeOption>
-                </FilterSize>
-                </Filter>
-            </FilterContainer>
+            
             <AddContainer>
                 <AmountContainer>
                 <Remove />

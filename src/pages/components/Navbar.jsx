@@ -2,9 +2,11 @@ import { Search, ShoppingCartOutlined } from '@mui/icons-material';
 import Badge from '@mui/material/Badge';
 import React from 'react';
 import styled from 'styled-components';
+import { mobile } from "../../responsive";
 
 const Container = styled.div`
     height: 60px;
+    ${mobile({height: "50px"})}
 `
 
 const Wrapper = styled.div`
@@ -12,6 +14,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    ${mobile({padding: "10px 0px"})}
 
 `
 const Left = styled.div`
