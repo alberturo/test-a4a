@@ -43,38 +43,65 @@ export const categories = [
 export const popularProducts = [
         {
             id:1,
+            title: "El Nombre Del Viento",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum",
             img:"https://media.revistagq.com/photos/5ca5e8210a5ae6eb952a1bd9/master/w_320%2Cc_limit/los_25_best_sellers_que_tendrias_que_leer_antes_de_morir_788067039.jpg",
+            price: 10
         },
         {
             id:2,
+            title: "The Last Cuentista",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum",
             img:"https://storage.googleapis.com/du-prd/books/images/9781646140893.jpg",
+            price: 8
         },
         {
             id:3,
+            title: "Cien años de soledad",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum",
             img:"https://www.aboutespanol.com/thmb/W8OyhLJ147FdASo-xq1r0u1JzS8=/480x792/filters:fill(auto,1)/Gabriel-Garcia-Marquez-01-56a5a4303df78cf772893877.jpg",
+            price: 7
         },
         {
             id:4,
+            title: "El olvido que seremos",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum",
             img:"https://cloudfront-eu-central-1.images.arcpublishing.com/prisa/2AMCXCOLVFADROEBMTWANWGFTU.jpg",
+            price: 9
         },
         {
             id:5,
+            title: "La batalla cultural",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum",
             img:"https://panamericana.vteximg.com.br/arquivos/ids/431191-1600-1600/la-batalla-cultural-reflexiones-criticas-para-una-nueva-derecha-9781400238415.jpg",
+            price: 12
         },
         {
             id:6,
+            title: "El arte de la guerra",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum",
             img: "https://panamericana.vteximg.com.br/arquivos/ids/351504-1600-1600/el-arte-de-la-guerra-9789583058523.jpg",
+            price: 15
         },
         {
             id:7,
+            title: "Democracia envenenada",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum",
             img: "https://panamericana.vteximg.com.br/arquivos/ids/388773-1600-1600/democracia-envenenada-9789588969824.jpg",
+            price: 5
         },
         {
             id:8,
+            title: "El contrato social",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum",
             img: "https://panamericana.vteximg.com.br/arquivos/ids/405893-1600-1600/el-contrato-social-9788496975583.jpg",
+            price: 20
         },
         {
             id:9,
+            title: "It's Earth day",
+            desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum",
             img: "https://kidscreen.com/wp/wp-content/uploads/2011/03/scholastic-book.jpg",
+            price: 2
         },
     ]
