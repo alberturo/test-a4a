@@ -14,11 +14,14 @@ This is a sample application that demonstrates an E-commerce website using the R
 
 
 ## Import Data
-I have included a data file in this repo. Inside that file you will find exportation of 3 conts: ```bash export const sliderItems | export const categories | export const popularProducts ``` These 3 conts contain the data in order to mock the img, id, title and bg of the products.
+I have made a API for this test using NodeJS, saving the database at MongoDB and deployed in Heroku in this [link](https://obscure-anchorage-32277.herokuapp.com/api/). The tests were done using postman
+
+![API Tests](./src/assets/img/postman.png "postman")
+![MongoDB](./src/assets/img/mongoDB.png "MongoDB")
 
 ## Live Demonstration
 
-The E-commerce demo can be [viewed online here](#).
+The E-commerce demo can be [viewed online here](https://ecommerce-a4a-test.netlify.app/).
 
 Here are screenshots that show the E-commerce demo application in use.
 
@@ -61,16 +64,30 @@ git clone git@github.com:alberturo/test-a4a.git
 cd test-a4a
 ```
 
-Install dependencies with this command:
+Install dependencies Frontend with this command:
 ```bash
 npm install
 npm i styled-components
 npm install @mui/material @emotion/react @emotion/styled
+npm i axios
+npm install @reduxjs/toolkit
+npm install redux-persist
+
+```
+
+Install dependencies Backend with this command:
+```bash
+npm init -y
+npm install express mongoose dotenv nodemon
+npm i styled-components
+npm install @mui/material @emotion/react @emotion/styled
+npm i -g heroku
 ```
 
 Run the application with this command:
 ```bash
 npm start
+
 ```
 
 ## Tech Stack
@@ -81,4 +98,9 @@ npm start
 ## Code Scalable
 * Organization by components and pages
 * Responsive reusable
-* 
+* RequestMethod reusable
+
+## Security
+* implementations of standard and secure cryptographic algorithms [CryptoJS](https://www.npmjs.com/package/crypto-js)
+* JSON Web Token [JWT](https://www.npmjs.com/package/jsonwebtoken)
+* Environment variables .env
