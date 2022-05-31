@@ -1,9 +1,15 @@
 import { Add, Remove } from "@mui/icons-material";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import Announcement from "./components/Announcement";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Newsletter from "./components/Newsletter";
+import { publicRequest } from "../requestMethods";
+import { addProduct } from "../redux/cartRedux";
+import { useDispatch } from "react-redux";
+
 
 
 const Container = styled.div``;
@@ -80,32 +86,59 @@ const Button = styled.button`
 `;
 
 const Product = () => {
+    const location = useLocation();
+    const id = location.pathname.split("/")[2];
+    const [product, setProduct] = useState({});
+    const [quantity, setQuantity] = useState(1);
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+            const getProduct = async () => {
+            try {
+                const res = await publicRequest.get("/products/find/" + id);
+                setProduct(res.data);
+            } catch {}
+            };
+            getProduct();
+        }, [id]);
+
+    const handleQuantity = (type) =>{
+        if (type === "dec"){
+            quantity >1 && setQuantity(quantity -1);
+        } else {
+            setQuantity(quantity +1);
+        }
+    }
+
+    const handleClick = () => {
+        dispatch(
+            addProduct({...product, quantity})
+        )
+    
+    }
+
     return (
         <Container>
         <Navbar />
         <Announcement />
         <Wrapper>
             <ImgContainer>
-            <Image src="https://panamericana.vteximg.com.br/arquivos/ids/405893-1600-1600/el-contrato-social-9788496975583.jpg" />
+                <Image src={product.img} />
             </ImgContainer>
             <InfoContainer>
-            <Title>El contrato Social</Title>
+            <Title>{product.title}</Title>
             <Desc>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                venenatis, dolor in finibus malesuada, lectus ipsum porta nunc, at
-                iaculis arcu nisi sed mauris. Nulla fermentum vestibulum ex, eget
-                tristique tortor pretium ut. Curabitur elit justo, consequat id
-                condimentum ac, volutpat ornare.
+                {product.desc}
             </Desc>
-            <Price>$ 20</Price>
+            <Price>$ {product.price}</Price>
             
             <AddContainer>
                 <AmountContainer>
-                <Remove />
-                <Amount>1</Amount>
-                <Add />
+                <Remove onClick={()=> handleQuantity("dec")} />
+                <Amount>{quantity}</Amount>
+                <Add onClick={()=> handleQuantity("inc")} />
                 </AmountContainer>
-                <Button>ADD TO CART</Button>
+                <Button onClick={handleClick}>ADD TO CART</Button>
             </AddContainer>
             </InfoContainer>
         </Wrapper>
